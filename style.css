@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    gap: 30px;
+    background-color: #1b2b3a;
+    font-family: 'Poppins', sans-serif;
+}
+
+.inputBox {
+    width: 250px;
+    position: relative;
+}
+
+.inputBox input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255,255,255,0.25);
+    background-color: #1b2b3a;
+    outline: none;
+    color: #fff;
+    font-size: 1em;
+    border-radius: 5px;
+    transition: .5s;
+}
+
+.inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    color: rgba(255,255,255,0.25);
+    font-size: 1em;
+    text-transform: uppercase;
+    transition: .5s;
+}
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span {
+    color: #00dfc4;
+    transform: translateX(10px) translateY(-7px);
+    padding: 0 10px;
+    background-color: #1b2b3a;
+    border-right: 1px solid #00dfc4;
+    border-left: 1px solid #00dfc4;
+    letter-spacing: .2em;
+    font-size: .65em;
+}
+
+.inputBox input:valid,
+.inputBox input:focus {
+    border: 1px solid #00dfe4;
+}
+
+.inputBox:nth-child(2) input:valid ~ span,
+.inputBox:nth-child(2) input:focus ~ span {
+    color: #1b2b3a;
+    background-color: #00dfc4;
+    border-radius: 10px;
+}
